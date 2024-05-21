@@ -20,7 +20,7 @@ public class Controller {
     public String save(@RequestBody Entities entities)
     {
         repo.save(entities);
-        return "welcome Prudhvi";
+        return "welcome Prudhvi reddy";
     }
 
     @GetMapping("/getall")
