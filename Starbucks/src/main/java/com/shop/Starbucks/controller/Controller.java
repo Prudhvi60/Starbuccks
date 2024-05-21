@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/map")
 public class Controller {
@@ -19,5 +21,10 @@ public class Controller {
     {
         repo.save(entities);
         return "welcome Prudhvi";
+    }
+
+    @GetMapping("/getall")
+    public List<Entities> getall(){
+      return  repo.findAll();
     }
 }
